@@ -1,0 +1,47 @@
+﻿@model EmployeesListMVC.Models.UpdateEmployeeViewModel
+
+@{
+}
+
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <title>Edit</title>
+</head>
+<body>
+<div>
+    <h1>Edit Employee</h1>
+    <form method="post" class="mt-2" action="View">
+        <div class="mb-3">
+            <label class="form-label" readonly="true" for="">Id</label>
+            <input type="text" asp-for="Id" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="">Nom</label>
+            <input type="text" asp-for="Name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="">Email</label>
+            <input type="text" asp-for="Email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="">Salaire</label>
+            <input type="text" asp-for="Salary" class="form-control">
+        </div>
+        <div class="mb-3 w-25">
+            <label class="form-label" for="">Date de naissance</label>
+            <input type="date" asp-for="DateOfBirth" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="">Département</label>
+            <input type="text" asp-for="Department" class="form-control">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" asp-action="Delete" asp-controller="Employees" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+</body>
+</html>
